@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    // 프로젝트 빌드를 jar가 아닌 war로 change
     id 'war'
 }
 
