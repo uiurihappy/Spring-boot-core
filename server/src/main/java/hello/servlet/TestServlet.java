@@ -18,7 +18,6 @@ public class TestServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("TestServlet.service");
 //        super.service(req, resp);
-        // git test
         resp.getWriter().println("test writer");
     }
 }
