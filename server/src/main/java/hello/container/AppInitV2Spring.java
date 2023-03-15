@@ -3,8 +3,6 @@ package hello.container;
 import hello.spring.HelloConfig;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletRegistration;
-import org.springframework.cglib.proxy.Dispatcher;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
@@ -29,12 +27,13 @@ public class AppInitV2Spring implements AppInit {
 		servlet.addMapping("/spring/*");
 
 	}
-	/* /spring/hello-spring
+	/*
+	  /spring/hello-spring
 	  실행을 /spring/* 패턴으로 호출했기 때문에 다음과 같이 동작한다.
 	  dispatcherV2 디스패처 서블릿이 실행된다. ( /spring )
 	  dispatcherV2 디스패처 서블릿은 스프링 컨트롤러를 찾아서 실행한다. ( /hello-spring )
 	  이 때 서블릿을 찾아서 호출하는데 사용된 /spring 을 제외한 /hello-spring 가 매핑된 컨트롤러 HelloController )의 메서드를 찾아서 실행한다.
 	  (쉽게 이야기해서 뒤에 * 부분으로 스프링 컨트롤러를 찾는다.)
 	 */
-	 */
+
 }
